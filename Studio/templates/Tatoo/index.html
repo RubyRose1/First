@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+    <head>
+        <meta charset="utf-8">
+        <title>Tattoo Studio - Главная</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="shortcut icon" href="../../static/favicon.ico">
+        <link rel="stylesheet" href="../../static/css/main.css">
+        <link rel="stylesheet" href="../../static/css/social-buttons.css">
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <header id="master-header" class="full-screen overlayed">
+
+                <div class="bg-overlay"></div>
+                <div id="media-container"></div>
+                <div class="top-header">
+                    
+                    <div class="container">
+
+                        <!-- ============ Main Navigation - START ============ -->
+
+                        <a id="nav-toggle" href="#"><span></span></a>
+                        <nav id="nav-menu">
+                            <ul>
+                                <li>
+                                    <a title="Главная" href="{% url 'start' %}">Главная страница</a>
+                                </li>
+                                <li>
+                                    <a title="Услуги и цены" href="{% url 'price' %}">Услуги и цены</a>
+                                </li>
+                                <li>
+                                    <a title="Контакты" href="{% url 'contacts' %}">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- ============ Main Navigation - END ============ -->
+
+                    </div>
+
+                </div>
+
+                <div id="brand">
+
+                    <h1 id="logo"><img src="../../static/img/logo.png" alt="Tattoo Studio"></h1>
+                    <div class="info">
+                        <span>Tattoo</span><img src="../../static/img/divider.png" alt=""><span>Studio</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- ============ Main Header - END ============ -->
+
+            <div id="main">
+
+                <!-- ============ Contacts Bar - START ============ -->
+
+                <div id="contacts-bar" class="row">
+                    <div class="address col-md-6"><strong>Tattoo Studio:</strong> Тут адрес</div>
+                    <div class="other col-md-6">
+                        <span class="contact"><i class="fa fa-phone"></i>Телефон: <strong>А тут номер телефона</strong></span>
+                        <span class="contact"><i class="fa fa-envelope"></i>Email: <strong>А тут почта</strong></span>
+                    </div>
+                </div>
+
+                <!-- ============ Contacts Bar - END ============ -->
+
+                                <!-- ============ Services - START ============ -->
+
+                <div id="service" class="section">
+
+                    <div class="content container">
+                        <h1 align ="center">Новости</h1>
+                       <div class="header-meta post-meta">
+                         <div class="row">
+                           {% for News in new %}
+                             <div class="col-md-4">
+                                <h3>{{ News.title }}</h3>
+                                <span class="date">{{ News.published_date }}</span>
+                                <p>{{ News.text}}</p>
+                             </div>
+                           {% endfor %}
+                         </div>
+
+
+                       </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ============ Services - END ============ -->
+
+                <!-- ============ Instagram Banner - START ============ -->
+
+                <a class="instagram-bar" href="#">Наши фото в <strong>Instagram</strong>!</a>
+                <!-- ============ Instagram Banner - END ============ -->
+
+            </div>
+
+            <!-- ============ Footer - START ============ -->
+
+            <footer class="dark">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="footer-col col-md-4 col-sm-6">
+
+                            <h3 class="focus-title">О нас</h3>
+                            <p><img width="545" class="align-center" src="../../static/img/logo.png" alt="Tattoo Studio"></p>
+                            <p>Информация о студии тату.</p>
+
+                        </div>
+
+                        <div class="footer-col col-md-4 col-sm-6">
+
+                            <h3 class="focus-title"><i class="fa fa-clock-o"></i>Рабочие дни</h3>
+                            <dl class="working-days">
+                                <dt>Понедельник</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Вторник</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Среда</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Четверг</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Пятница</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Суббота</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Воскресенье</dt>
+                                <dd>Закрыты</dd>
+                            </dl>
+
+                        </div>
+
+                        <div class="footer-col footer-contacts col-md-4 col-sm-12">
+
+                            <div class="contact-item"><span>Tattoo Studio:</span> <strong>Тут адрес</strong></div>
+                            <div class="contact-item"><span>Phone:</span> <strong>Тут номер телефона</strong></div>
+                            <div class="contact-item"><span>Email:</span> <strong><a href="#">Тут гиперссылка на почту</a></strong></div>
+                            <div class="contact-item">
+                                <span>Мы в соц.сетях:</span>
+                                <ul class="social-links">
+                                    <li><a title="VK" href="#" class="sb facebook"></a></li>
+                                    <li><a title="Twitter" href="#" class="sb pinterest"></a></li>
+                                    <li><a title="Instagram" href="#" class="sb heart"></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="copyright">
+                    &copy; 2017 - <strong>RubyRose1</strong>
+                </div>
+
+            </footer>
+
+            <!-- ============ Footer - END ============ -->
+
+        </div>
+
+        <script src="../../static/js/jquery.min.js"></script>
+        <script src="../../static/js/common.js"></script>
+        <script src="../../static/js/config.js"></script>
+        <script src="../../static/js/main.js"></script>
+
+        <script>
+            $('#media-container').backstretch('../../static/img/bg.jpg');
+        </script>
+
+    </body>
+</html>
