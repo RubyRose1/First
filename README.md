@@ -29,6 +29,3 @@ Using the google maps API:
 
 ![alt text](https://s8.hostingkartinok.com/uploads/images/2017/07/15f5363e1afe68cc68b5dd978badd6fd.jpg)
 
-Email form:
-
-![alt text](https://s8.hostingkartinok.com/uploads/images/2017/07/780cac91645eebc10651a6a94ed28295.jpg) 
