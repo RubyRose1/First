@@ -1,6 +1,9 @@
 # First
 First full project. Tattoo site. For portfolio.
 
+# Front-end: HTML+CSS(Bootstrap)+JS(Jquery). 
+# Back-end: Django.
+
 Start page:
 
 ![alt text](https://s8.hostingkartinok.com/uploads/images/2017/07/0c3b1c82a088ac68b7270ea5fb914b80.jpg)
